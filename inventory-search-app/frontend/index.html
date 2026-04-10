@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <section class="card" aria-label="Task manager">
+      <h1>Task Manager</h1>
+      <p class="subtitle">Add tasks, mark them complete, or remove them.</p>
+
+      <form id="taskForm" class="task-form">
+        <input
+          id="taskTitleInput"
+          type="text"
+          placeholder="Enter a task title"
+          aria-label="Task title"
+          required
+        />
+        <button id="addTaskBtn" type="submit">Add Task</button>
+      </form>
+
+      <p id="loadingState" class="status hidden">Loading tasks...</p>
+      <p id="errorState" class="status error hidden" role="alert"></p>
+
+      <ul id="taskList" class="task-list" aria-live="polite"></ul>
+      <p id="emptyState" class="status hidden">No tasks yet.</p>
+    </section>
+  </main>
+</body>
+</html>
